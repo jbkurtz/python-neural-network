@@ -1,4 +1,5 @@
 import numpy
+import scipy.special
 
 # Base Neural Network Class
 class neuralNetwork:
@@ -26,6 +27,23 @@ class neuralNetwork:
     def train():
         pass
 
+    # Activation function, currently a sigmoid function
+    def activation(self, value):
+        return scipy.special.expit(value)
+
     # Ask the network for output based on input
-    def query():
-        pass
+    def query(self, inputs_list):
+        # Convert inputs list into 2D Array
+        inputs = numpy.array(inputs_list, ndmin=2) .T
+
+        # Calculate signal into hidden layer
+        hidden_inputs = numpy.dot(self.wih, inputs)
+        # Calculate signal emerging from hidden layer
+        hidden_outputs = self.activation(hidden_inputs)
+
+        # Calculate signal into final output layer
+        final_inputs = numpy.dot(self.who, hidden_outputs)
+        # Calculate signal emerging from final output layer
+        final_outputs = self.activation(final_inputs)
+
+        return final_outputs
