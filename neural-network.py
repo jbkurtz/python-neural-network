@@ -12,7 +12,15 @@ class neuralNetwork:
 
         # Set learning rate
         self.lr = learningRate
-        pass
+
+        # Link weight matrices
+        # wih: Weights for Input->Hidden
+        # who: Weights for Hidden->Output
+        # Weights inside the matrices are w_i_j, where link is from node i to node j in the next layer
+        # w11 w12
+        # w21 w22 etc
+        self.wih = (numpy.random.rand(self.hnodes, self.inodes) - 0.5)
+        self.who = (numpy.random.rand(self.onodes, self.hnodes) - 0.5)
 
     # Refine the weights in the network after using a training set
     def train():
