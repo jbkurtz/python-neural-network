@@ -1,6 +1,6 @@
 # Python Neural Network
 
-##### By: Jack Kurtz (jbkurtz)
+__Author:__ Jack Kurtz (jbkurtz)
   
 
 
@@ -9,3 +9,5 @@ This is project is my attempt at a personal introduction to neural networks. I w
 
 # Usage  
 After cloning the repository, run setup.py to install the needed dependencies. This should only be needed once.
+
+It can be run by using `python main.py`. It currently uses the images found in mnist_dataset/images for training and testing.
