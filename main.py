@@ -15,7 +15,7 @@ learning_rate = 0.3
 network = nn.neuralNetwork(input_nodes, hidden_nodes, output_nodes, learning_rate)
 
 # Train the network
-with open('mnist_dataset/mnist_train_100.csv') as fp:
+with open('mnist_dataset/mnist_train.csv') as fp:
     training_data = fp.readlines()
 
 for record in training_data:
