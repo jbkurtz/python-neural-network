@@ -1,1 +1,4 @@
 *.code-workspace
+__pycache__/
+mnist_train.csv
+mnist_test.csv
